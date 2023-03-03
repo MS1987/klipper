@@ -920,9 +920,6 @@ class MCU:
             self._restart_cheetah()
         else:
             self._restart_arduino()
-    def microcontroller_close_port(self):
-        logging.info("Self define cmd: close Port ")
-        self._disconnect()
     # Misc external commands
     def is_fileoutput(self):
         return self._printer.get_start_args().get('debugoutput') is not None
