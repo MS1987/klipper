@@ -370,7 +370,7 @@ def main():
         main_reactor = reactor.Reactor(gc_checking=True)
         printer = Printer(main_reactor, bglogger, start_args)
         res = printer.run()
-        if res in ['exit', 'error_exit']:
+        if res in ['exit', 'error_exit', 'close_mcu_port']:
             break
         time.sleep(1.)
         main_reactor.finalize()
